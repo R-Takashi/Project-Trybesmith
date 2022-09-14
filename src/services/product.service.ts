@@ -15,4 +15,11 @@ export default class ProductService {
     const newProduct = { status: 201, data };
     return newProduct;
   }
+
+  public async getAll(): Promise<IProductService> {
+    const result = await this.model.getAll();
+    const data = result as IProduct[];
+    const products = { status: 200, data };
+    return products;
+  }
 }
