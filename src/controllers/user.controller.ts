@@ -12,7 +12,7 @@ export default class UserController {
 
     const { status, data } = await this.userService.create(user);
 
-    const token = jwt.sign({ user: data.username }, 'trybesmith');
+    const token = jwt.sign({ id: data.id, username: data.username }, 'trybesmith');
 
     return res.status(status).json({ token });
   };

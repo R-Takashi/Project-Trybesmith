@@ -13,6 +13,8 @@ app.use('/users', routes.userRouter);
 
 app.use('/orders', routes.orderRouter);
 
+app.use('/login', routes.loginRouter);
+
 app.use(httpErrorMiddleware);
 
 export default app;

@@ -33,3 +33,15 @@ export interface IOrderService {
   status: number,
   data: IOrder | IOrder[],
 }
+
+export interface ILogin {
+  username: string;
+  password: string;
+}
+
+export interface ILoginService {
+  status: number,
+  message?: string,
+  id?: number,
+  username?: string,
+}
