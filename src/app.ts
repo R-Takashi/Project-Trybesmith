@@ -11,6 +11,8 @@ app.use('/products', routes.productRouter);
 
 app.use('/users', routes.userRouter);
 
+app.use('/orders', routes.orderRouter);
+
 app.use(httpErrorMiddleware);
 
 export default app;

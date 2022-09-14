@@ -22,3 +22,14 @@ export interface IUserService {
   status: number,
   data: IUser,
 }
+
+export interface IOrder {
+  id: number;
+  userId: number;
+  productIds: number[];
+}
+
+export interface IOrderService {
+  status: number,
+  data: IOrder | IOrder[],
+}
