@@ -1,12 +1,13 @@
 import { Router } from 'express';
 
 import UserController from '../controllers/user.controller';
-import validUserMiddleware from '../middleware/valid.user.middleware';
+import { validUsername, validClass, 
+  validLevel, validPassword } from '../middleware/valid.user.middleware';
 
 const userRouter = Router();
 
 const userController = new UserController();
 
-userRouter.post('/', validUserMiddleware, userController.create);
+userRouter.post('/', validUsername, validClass, validLevel, validPassword, userController.create);
 
 export default userRouter;
