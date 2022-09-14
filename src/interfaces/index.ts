@@ -24,9 +24,9 @@ export interface IUserService {
 }
 
 export interface IOrder {
-  id: number;
+  id?: number;
   userId: number;
-  productIds: number[];
+  productsIds: number[];
 }
 
 export interface IOrderService {
@@ -44,4 +44,13 @@ export interface ILoginService {
   message?: string,
   id?: number,
   username?: string,
+}
+
+export interface IToken {
+  authorization: string;
+}
+
+export interface ITokenDecoded {
+  id: number;
+  username: string;
 }

@@ -16,4 +16,11 @@ export default class OrderService {
     const orders = { status: 200, data };
     return orders;
   }
+
+  public async create(order: IOrder): Promise<IOrderService> {
+    const result = await this.model.create(order);
+    const data = result as IOrder;
+    const orders = { status: 201, data };
+    return orders;
+  }
 }
